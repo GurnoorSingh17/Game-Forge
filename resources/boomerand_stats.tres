@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="BoomerangStats" format=3 uid="uid://db2k1w1fod3gu"]
+
+[ext_resource type="Script" uid="uid://satp7xmksiim" path="res://scripts/boomerand_stats.gd" id="1_avk4g"]
+
+[resource]
+script = ExtResource("1_avk4g")
+metadata/_custom_type_script = "uid://satp7xmksiim"

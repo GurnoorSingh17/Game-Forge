@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ddhyy80k57uhc"]
+
+[ext_resource type="Script" uid="uid://dsyk08dwyucf6" path="res://scripts/boomerand_preview.gd" id="1_rnx68"]
+
+[node name="boomerang_preview" type="Node2D" unique_id=1186025027]
+script = ExtResource("1_rnx68")

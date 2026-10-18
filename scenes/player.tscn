@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://yort6bw4y5ci"]
+
+[ext_resource type="Script" uid="uid://dfa1occn0tx7m" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://uylyat3kw3o4" path="res://art/ground.png" id="3_dqkch"]
+[ext_resource type="Script" uid="uid://bxmkqmd8r3ll5" path="res://scripts/return_marker.gd" id="4_dqkch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpseo"]
+size = Vector2(127, 126)
+
+[node name="Player" type="CharacterBody2D" unique_id=100623149]
+script = ExtResource("1_g2els")
+MoveSpeed = 300
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1286997167]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_gpseo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1253948361]
+offset = Vector2(-50, 50)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Hand" type="Node2D" parent="." unique_id=110390151]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1197913715]
+texture_filter = 1
+position = Vector2(3.8146973e-06, 0.4999962)
+scale = Vector2(3.9999998, 3.9687502)
+texture = ExtResource("3_dqkch")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1525419439]
+position = Vector2(60, -29)
+script = ExtResource("4_dqkch")

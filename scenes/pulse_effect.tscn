@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dt0ac0dnx7s6t"]
+
+[ext_resource type="Script" uid="uid://b80vyqaa0g54k" path="res://scripts/pulse_effect.gd" id="1_e7nnx"]
+
+[node name="PulseEffect" type="Node2D" unique_id=2027583036]
+script = ExtResource("1_e7nnx")

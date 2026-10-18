@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cc43cqqidhmke"]
+
+[ext_resource type="Script" uid="uid://b2fleyyaoobph" path="res://scripts/beat_grid_ui.gd" id="1_qmmtt"]
+[ext_resource type="PackedScene" uid="uid://bjeq0074ksco0" path="res://scenes/beat_slot.tscn" id="2_ycp2t"]
+
+[node name="BeatGridUI" type="Control" unique_id=862062600 node_paths=PackedStringArray("slot_container")]
+custom_minimum_size = Vector2(0, 130)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_qmmtt")
+slot_container = NodePath("SlotContainer")
+slot_scene = ExtResource("2_ycp2t")
+
+[node name="SlotContainer" type="HBoxContainer" parent="." unique_id=460695173]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://dlpmkxat1w2av"]
+
+[ext_resource type="Script" uid="uid://c26dp03ssc5fm" path="res://scripts/ability.gd" id="1_421jm"]
+
+[resource]
+script = ExtResource("1_421jm")
+display_name = "Pulse"
+metadata/_custom_type_script = "uid://c26dp03ssc5fm"

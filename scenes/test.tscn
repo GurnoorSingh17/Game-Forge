@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b6xmhhrwp7h3l"]
+
+[ext_resource type="PackedScene" uid="uid://yort6bw4y5ci" path="res://scenes/player.tscn" id="1_lpvoh"]
+[ext_resource type="PackedScene" uid="uid://cf55x3jr3da6o" path="res://scenes/boomerang.tscn" id="3_jcd4p"]
+[ext_resource type="PackedScene" uid="uid://ddhyy80k57uhc" path="res://scenes/boomerang_preview.tscn" id="4_uacia"]
+[ext_resource type="PackedScene" uid="uid://cc43cqqidhmke" path="res://scenes/beat_grid_ui.tscn" id="5_yk7ts"]
+[ext_resource type="PackedScene" uid="uid://cracha8ni8cuq" path="res://scenes/beat_grid.tscn" id="6_ajshl"]
+[ext_resource type="PackedScene" uid="uid://bp2kgm84sty1h" path="res://scenes/ability_bar.tscn" id="6_uacia"]
+[ext_resource type="Script" uid="uid://c26dp03ssc5fm" path="res://scripts/ability.gd" id="7_yk7ts"]
+[ext_resource type="Resource" uid="uid://dlpmkxat1w2av" path="res://resources/ability_pulse.tres" id="8_ajshl"]
+[ext_resource type="PackedScene" uid="uid://dhjgghuv6bmqj" path="res://scenes/throw_indicator.tscn" id="9_uacia"]
+
+[node name="Test" type="Node2D" unique_id=494981197]
+y_sort_enabled = true
+
+[node name="Player" parent="." unique_id=100623149 instance=ExtResource("1_lpvoh")]
+position = Vector2(428, 324)
+
+[node name="Marker2D" parent="Player" index="4" unique_id=1525419439]
+visible = false
+
+[node name="Boomerang" parent="." unique_id=1787255979 node_paths=PackedStringArray("player") instance=ExtResource("3_jcd4p")]
+position = Vector2(440, 226)
+player = NodePath("../Player")
+
+[node name="boomerang_preview" parent="." unique_id=1186025027 instance=ExtResource("4_uacia")]
+spacing = 28.0
+dot_radius = 6.0
+end_alpha = 0.0
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1770963236]
+
+[node name="BeatGridUI" parent="UILayer" unique_id=862062600 node_paths=PackedStringArray("grid") instance=ExtResource("5_yk7ts")]
+grid = NodePath("../../BeatGrid")
+
+[node name="AbilityBar" parent="UILayer" unique_id=1730308508 instance=ExtResource("6_uacia")]
+abilities = Array[ExtResource("7_yk7ts")]([ExtResource("8_ajshl")])
+
+[node name="BeatGrid" parent="." unique_id=293557111 node_paths=PackedStringArray("boomerang_ref", "player_ref") instance=ExtResource("6_ajshl")]
+boomerang_ref = NodePath("../Boomerang")
+player_ref = NodePath("../Player")
+
+[node name="ThrowIndicator" parent="." unique_id=1079833553 node_paths=PackedStringArray("player", "boomerang", "preview") instance=ExtResource("9_uacia")]
+player = NodePath("../Player")
+boomerang = NodePath("../Boomerang")
+preview = NodePath("../boomerang_preview")
+
+[editable path="Player"]

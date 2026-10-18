@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://btn5fxuqc5fmc"]
+
+[ext_resource type="Script" uid="uid://d2hgdcvdm4dsv" path="res://scripts/ability_button.gd" id="1_a3gyf"]
+
+[node name="AbilityButton" type="TextureButton" unique_id=159021731]
+custom_minimum_size = Vector2(80, 80)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_a3gyf")
+
+[node name="Label" type="Label" parent="." unique_id=646650109]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
